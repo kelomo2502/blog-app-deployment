@@ -1,0 +1,21 @@
+{
+  "name": "blogapp-backend",
+  "version": "1.0.0",
+  "description": "Production-ready blog backend with Node.js, Express, MongoDB, and Redis caching.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.0",
+    "redis": "^4.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
