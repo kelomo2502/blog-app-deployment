@@ -1,6 +1,6 @@
 // pages/posts/[id].js
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const PostDetail = () => {
   const router = useRouter();

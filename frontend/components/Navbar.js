@@ -7,17 +7,17 @@ const Navbar = () => {
 
   return (
     <nav style={{ padding: '1rem', background: '#fff', marginBottom: '1rem', borderBottom: '1px solid #ddd' }}>
-      <Link href="/"><a style={{ marginRight: '1rem' }}>Home</a></Link>
+      <Link href="/" style={{ marginRight: '1rem' }}>Home</Link>
       {user ? (
         <>
-          <Link href="/dashboard"><a style={{ marginRight: '1rem' }}>Dashboard</a></Link>
-          <Link href="/profile"><a style={{ marginRight: '1rem' }}>Profile</a></Link>
+          <Link href="/dashboard" style={{ marginRight: '1rem' }}>Dashboard</Link>
+          <Link href="/profile" style={{ marginRight: '1rem' }}>Profile</Link>
           <a href="#" onClick={logout}>Logout</a>
         </>
       ) : (
         <>
-          <Link href="/login"><a style={{ marginRight: '1rem' }}>Login</a></Link>
-          <Link href="/register"><a>Register</a></Link>
+          <Link href="/login" style={{ marginRight: '1rem' }}>Login</Link>
+          <Link href="/register">Register</Link>
         </>
       )}
     </nav>

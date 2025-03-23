@@ -1,9 +1,9 @@
 // pages/dashboard.js
-import { useEffect, useState } from 'react';
-import { useAuth } from '../context/AuthContext';
-import ProtectedRoute from '../components/ProtectedRoute';
-import PostCard from '../components/PostCard';
-import Link from 'next/link';
+import { useEffect, useState } from "react";
+import { useAuth } from "../context/AuthContext";
+import ProtectedRoute from "../components/ProtectedRoute";
+import PostCard from "../components/PostCard";
+import Link from "next/link";
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -22,8 +22,8 @@ const Dashboard = () => {
   return (
     <ProtectedRoute>
       <div>
-        <h1>{user.username}'s Dashboard</h1>
-        <Link href="/posts/create"><a>Create New Post</a></Link>
+        <h1>{user?.username}'s Dashboard</h1>
+        <Link href="/posts/create">Create New Post</Link>
         {posts.length === 0 ? (
           <p>You haven't created any posts yet.</p>
         ) : (

@@ -1,14 +1,14 @@
 // pages/index.js
-import { useEffect, useState } from 'react';
-import PostCard from '../components/PostCard';
+import { useEffect, useState } from "react";
+import PostCard from "../components/PostCard";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
-  const [source, setSource] = useState('db');
+  const [source, setSource] = useState("db");
 
   useEffect(() => {
     // Fetch posts from backend API
-    fetch('http://localhost:5000/api/posts')
+    fetch("http://localhost:5000/api/posts")
       .then((res) => res.json())
       .then((data) => {
         setPosts(data.posts);

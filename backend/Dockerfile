@@ -1,11 +1,16 @@
 # Use the official Node.js LTS image.
 FROM node:18-alpine
 
+# Install required dependencies for bcrypt
+RUN apk add --no-cache python3 make g++
+
 # Create and change to the app directory.
 WORKDIR /usr/src/app
 
-# Install app dependencies.
+# Copy package.json files
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install --production
 
 # Copy the rest of the application.

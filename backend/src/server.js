@@ -1,6 +1,7 @@
 // src/server.js
 const express = require('express');
 const app = express();
+const cors = require('cors')
 const connectDB = require('./config/db');
 const errorHandler = require('./middlewares/errorHandler');
 const { port } = require('./config/config');
@@ -10,6 +11,11 @@ connectDB();
 
 // Middlewares
 app.use(express.json());
+app.use(cors({
+  origin: 'http://localhost:3000', // Allow requests from Next.js frontend
+  methods: 'GET,POST,PUT,DELETE',
+  allowedHeaders: 'Content-Type,Authorization'
+}))
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
